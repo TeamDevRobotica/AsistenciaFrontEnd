@@ -3,9 +3,7 @@
     <ion-title >Iniciar seción</ion-title>
   </ion-toolbar>
 </ion-header>
-
-  <!-- Especifico plataformas con atributo mode -->
-
+<!-- Especifico plataformas con atributo mode -->
 <ion-content color= "warning" mode="ios"  mode="md"> 
   <!-- Agregar un grid para alinear a justificado-->
 <ion-grid>
@@ -15,32 +13,40 @@
     <ion-card-content>
 
  <!-- Insertar el banner aqui -->
- <ion-img src="C:\Users\Jeni\asistencia\src\logo-color.png">
-
+ <ion-img src="https://github.com/TeamDevRobotica/AsistenciaFrontEnd/blob/jeni/src/logo-color.png?raw=true">
+  <!-- <ion-img src="logo-color.png"> -->
 </ion-img>
-    <ion-input value="PLANILLA DE ASISTENCIA DIGITAL" text-align:center></ion-input>
-
-    <ion-list class="background-input">
-    <ion-item>
-<!-- Etiqueta usuario -->
-<!-- <ion-input value="Usuario *"></ion-input> -->
-
+<br>
+<br>
+  <!-- <ion-list class="estilo_input" > -->
+      <ion-input value="PLANILLA DE ASISTENCIA DIGITAL" readonly="true" style= "font-weight: 700" style="text-align:center" size=13 type="text"></ion-input>
+  <!-- </ion-list> -->
+  <!-- probando Estilos  -->
+    <ion-list class="background-input"  style="background: transparent">
+  <ion-item >
 <!-- Text Usuario -->
-<ion-input placeholder="Usuario" ></ion-input>
-  <br/>
-  <br/>
-<!-- Etiqueta contraseña -->
-<!-- <ion-input value="Contraseña *"></ion-input> -->
-
+<ion-input placeholder="Usuario"></ion-input>
+    </ion-item>
+    <br>
+    <ion-item>
 <!-- Text contraseña -->
-<ion-input placeholder="contraseña"></ion-input>
-</ion-item>
-</ion-list>
+        <ion-input placeholder="contraseña" type= "password" ></ion-input>
+    </ion-item>
+<br>
 <!-- Botón -->
-<!-- <ion-button color="danger">Ingresar</ion-button> -->
+<ion-row>
+  <ion-col></ion-col>
+  <ion-col>
+    <ion-button color="primary" href="principal" mode="ios"  mode="md" type= "submit">Ingresar</ion-button>
+  </ion-col>
+</ion-row>
+    
 
-<a href="principal.page.html">Ingresar</a>
-
+<!-- Link Ingresar -->
+  <!-- <ion-item class="color_item"> -->
+      <!-- <a  href="principal.page.html" style="text-decoration:none" >Ingresar</a>   -->
+  <!-- </ion-item> -->
+</ion-list>
 </ion-card-content>
 </ion-row>
 </ion-grid>
