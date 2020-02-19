@@ -1,47 +1,35 @@
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar color= "warning">
-    <ion-title >Iniciar seción</ion-title>
+    <ion-title >Iniciar sesión</ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
-  <!-- Especifico plataformas con atributo mode -->
-
-<ion-content color= "warning" mode="ios"  mode="md"> 
-  <!-- Agregar un grid para alinear a justificado-->
-<ion-grid>
-  <ion-row>
-    <!-- Default Input -->
-    <ion-input></ion-input>
+<ion-content color="warning">
+  <ion-row class="ion-justify-content-center">
+    <ion-col class="ion-align-self-center" size-md="6" size-lg="5" size-xs="12">
+      
+    <ion-card style="border: none;box-shadow: none;">
+      
+      
+        <!-- <ion-card-title color="light">Iniciar Sesion</ion-card-title> -->
+      <!-- </ion-item> -->
     <ion-card-content>
-
- <!-- Insertar el banner aqui -->
- <ion-img src="C:\Users\Jeni\asistencia\src\logo-color.png">
-
-</ion-img>
-    <ion-input value="PLANILLA DE ASISTENCIA DIGITAL" text-align:center></ion-input>
-
-    <ion-list class="background-input">
-    <ion-item>
-<!-- Etiqueta usuario -->
-<!-- <ion-input value="Usuario *"></ion-input> -->
-
-<!-- Text Usuario -->
-<ion-input placeholder="Usuario" ></ion-input>
-  <br/>
-  <br/>
-<!-- Etiqueta contraseña -->
-<!-- <ion-input value="Contraseña *"></ion-input> -->
-
-<!-- Text contraseña -->
-<ion-input placeholder="contraseña"></ion-input>
-</ion-item>
-</ion-list>
-<!-- Botón -->
-<!-- <ion-button color="danger">Ingresar</ion-button> -->
-
-<a href="principal.page.html">Ingresar</a>
-
-</ion-card-content>
-</ion-row>
-</ion-grid>
+      <ion-col class="ion-align-self-center" size-md="6" size-lg="5" size-xs="12">
+        <!-- <ion-item color="primary"> -->
+          <ion-img src="https://github.com/TeamDevRobotica/AsistenciaFrontEnd/blob/jeni/src/logo-color.png?raw=true">
+            <!-- <ion-img src="logo-color.png"> -->
+          </ion-img>
+      </ion-col>
+      <ion-item style="margin-bottom: 1rem;border-radius: 50px;">
+        <ion-input placeholder="Usuario" ></ion-input>
+      </ion-item>
+      <ion-item style="border-radius: 50px;margin-bottom: 1rem">
+        <ion-input placeholder="Contraseña"></ion-input>
+      </ion-item>
+        <a type="ion-button" style="border-radius: 40%;" expand="full" href="/principal">Ingresar</a>
+      
+    </ion-card-content>
+  </ion-card>
+</ion-col>
+  </ion-row>
 </ion-content>
