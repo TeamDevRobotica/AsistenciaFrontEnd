@@ -1,0 +1,23 @@
+.background-input {
+    margin-bottom: 0!important;
+    ion-item {
+        border-color: transparent!important;
+        // --highlight-height: 10;
+        //   background: transparent;
+          border-radius: 40px / 20px;
+        // font-weight: 700;
+        ion-label {
+            color: rgb(12, 11, 11)!important;
+            font-weight: 700;
+            font-size: 1rem!important;
+            border-radius: 40px / 20px;
+         }
+        ion-input {
+            // color: rgb(5, 5, 5);
+            border-radius: 40px;
+            font-weight: 400;
+            border:solid 1px black;
+            --placeholder-opacity:0;
+        }
+    }
+  }
