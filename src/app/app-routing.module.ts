@@ -13,9 +13,17 @@ const routes: Routes = [
     loadChildren: () => import('./principal/principal.module').then( m => m.PrincipalPageModule)
   },
   {
+    path: 'salida',
+    loadChildren: () => import('./salida/salida.module').then( m => m.SalidaPageModule)
+  },
+    {
     path: 'mensaje',
     loadChildren: () => import('./mensaje/mensaje.module').then( m => m.MensajePageModule)
+  },  {
+    path: 'salida',
+    loadChildren: () => import('./salida/salida.module').then( m => m.SalidaPageModule)
   },
+
 ];
 
 @NgModule({

@@ -16,7 +16,7 @@
     </ion-row>
     <ion-row>
     <ion-col>  
-    <ion-input type= "date" style="background-color:floralwhite" Readonly="True"></ion-input>
+    <ion-input type= "date" style="background-color:floralwhite" Readonly="True" ></ion-input>
     </ion-col>
   </ion-row>
   <ion-row>
@@ -32,15 +32,23 @@
     <ion-col>EFA1</ion-col>
     </ion-row>
     <ion-row>
-       <ion-col>
+       <ion-col >
         <ion-icon name="pin"></ion-icon>
         <ion-label >Coordenadas</ion-label>
       </ion-col>
     </ion-row>
-    </ion-grid>
+    <ion-row>
+    <ion-col>Tareas realizadas*</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-item style="margin-bottom: 1rem">
+        <ion-input style=background-color:floralwhite type='text' maxlength="150" ></ion-input>
+      </ion-item>
+  </ion-row>
+  </ion-grid>
   <ion-row class="ion-justify-content-center">
     <ion-col class="ion-align-self-center">
-    <ion-button float-right color="success" href="/salida" mode="ios"  mode="md" type= "submit">Marcar Entrada</ion-button>
+    <ion-button float-right color="danger" href="salida" mode="ios"  mode="md" type= "submit">Marcar Salida</ion-button>
     </ion-col>
   </ion-row>
 </ion-card-content>
