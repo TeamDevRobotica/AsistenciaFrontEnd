@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Geolocation, Geoposition } from '@ionic-native/geolocation/ngx';
-<<<<<<< HEAD
-=======
 import { AuthService } from '../servicios/auth.service';
+
+
 import { NavController } from '@ionic/angular';
->>>>>>> master
+
 
 @Component({
   selector: 'app-principal',
@@ -30,7 +30,7 @@ export class PrincipalPage implements OnInit {
               ionViewDidLoad(){
      
               };
->>>>>>> master
+
 ngAfterViewInit(){
   this.GeolocationNative();
 }
