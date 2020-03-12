@@ -14,7 +14,11 @@ const routes: Routes = [
               import('../principal/principal.module').then(m => m.PrincipalPageModule) 
         },
         { 
-          path: 'salida', loadChildren: '../salida/salida.module#SalidaPageModule' 
+
+          path: 'salida', 
+          loadChildren:() =>
+            import('../salida/salida.module').then(m => m.SalidaPageModule) 
+
         },
         // { 
         //   path: 'perfil', loadChildren: '../perfil/perfil.module#PerfilPageModule' 
@@ -33,6 +37,14 @@ const routes: Routes = [
     path:'principal',
     redirectTo:'/tabs/principal',
     pathMatch:'full'
+
+
+  },
+  {
+    path:'salida',
+    redirectTo:'/tabs/salida',
+    pathMatch:'full'
+
   }
 ];
 
