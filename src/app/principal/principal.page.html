@@ -1,53 +1,52 @@
 <ion-header style="text-align:center" color= "light">
-  <ion-toolbar color= "light">
+  <ion-toolbar color= "medium">
     <ion-title>RENZO FEDELI</ion-title>
   </ion-toolbar>
   </ion-header>
 <ion-content color= "light"  mode="ios"  mode="md">
-  <ion-card-content size-md="6" size-lg="5" size-xs="12" color= "light">
+  <ion-row class="ion-justify-content-center">
+  <ion-card-content>
+    <ion-col size-md="6" size-lg="5" size-xs="12" color= "light">
+   </ion-col>
   <!-- Armo grilla para alinear campos -->
     <ion-grid color= "light">
-      <ion-list class="background-input"  color= "light">
-            <ion-input value="Fecha*"></ion-input>
-        <ion-item >
-            <ion-input type= "date" class="background-input" Readonly="True"></ion-input>
-        </ion-item>
-      <ion-input value="Hora*"></ion-input>
-      <ion-item color="light">
-            <ion-input type="Hora" Readonly="True" class="background-input" style="background: transparent"></ion-input>
-     </ion-item>
-    </ion-list>
-      <ion-list>
-        <ion-item>
-          <ion-label>Lugar*</ion-label>
-          <ion-select multiple="false" [value]="['EFA1']">
-            <ion-select-option value="EFA1">EFA 1</ion-select-option>
-            <ion-select-option value="EFA2">EFA 2</ion-select-option>
-            <ion-select-option value="EFA3">EFA 3</ion-select-option>
-            <ion-select-option value="EFA4">EFA 4</ion-select-option>
-          </ion-select>
-        </ion-item>
-      </ion-list>
-<ion-row>   
-      <ion-col>   
-      </ion-col>
-      <ion-col>      
-      </ion-col>
-      <ion-col>       
-       
-      </ion-col>
-      <ion-col class="ion-align-right-right" size="60" offset=6>
-        <ion-icon name="pin"></ion-icon>
-        <ion-label  text-align:right>Coordenadas</ion-label>
-      </ion-col>
-    </ion-row> 
-    </ion-grid>
+    <ion-row>
+    <ion-col>Fecha:
+    </ion-col>
+    </ion-row>
+    <ion-row>
+    <ion-col>  
+    <ion-input type= "date" style="background-color:floralwhite" Readonly="True"></ion-input>
+    </ion-col>
+  </ion-row>
   <ion-row>
-    <ion-col></ion-col>
+    <ion-col>Hora</ion-col>
+  </ion-row>
+  <ion-row>
     <ion-col>
-      <ion-button color="success" href="principal" mode="ios"  mode="md" type= "submit">Marcar Entrada</ion-button>
+      <ion-input type = "text" style="background-color:floralwhite" Readonly="True">00:00</ion-input>
+    </ion-col>
+    <!-- <ion-item>
+      <ion-label color="primary">Time:</ion-label>
+      <ion-datetime cancelText="cancel" doneText="done" displayFormat="HH:mm" [(ngModel)]="miVariableHora" (ionChange)="validateButton()"></ion-datetime>
+    </ion-item> -->
+  </ion-row>
+    <ion-row>
+    <ion-col>Lugar</ion-col>
+    <ion-col>EFA1</ion-col>
+    </ion-row>
+    <ion-row>
+       <ion-col>
+        <ion-icon name="pin"></ion-icon>
+        <ion-label >Coordenadas</ion-label>
+      </ion-col>
+    </ion-row>
+    </ion-grid>
+  <ion-row class="ion-justify-content-center">
+    <ion-col class="ion-align-self-center">
+    <ion-button float-right color="success" href="/salida" mode="ios"  mode="md" type= "submit">Marcar Entrada</ion-button>
     </ion-col>
   </ion-row>
 </ion-card-content>
-
+</ion-row>
 </ion-content>
