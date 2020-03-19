@@ -8,7 +8,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
-  url='http://192.168.21.154:50000/usuarios';
+  // url='http://192.168.21.154:50000/usuarios';
+  url='http://c25bf4e9.ngrok.io/usuarios';
   constructor(public http: HttpClient) { 
     //  console.log('Hola Mundo');
   }
