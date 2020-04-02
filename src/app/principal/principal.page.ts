@@ -12,24 +12,18 @@ import { NavController } from '@ionic/angular';
   styleUrls: ['./principal.page.scss'],
 })
 export class PrincipalPage implements OnInit {
-  usuarios: any[];
+  usuarios:any[];
+  nombre: string;
+  usuario: string;
 
 
   
 
-  constructor(public geolocation:Geolocation, public navCtrl: NavController, 
-              public authService: AuthService) { 
-                console.log('Ingreso');
-     this.authService.obtenerDatos()
-     .subscribe(
-       (data)=>{this.usuarios=data; console.log(data);
-       },
-       (error)=>{console.log(error);}
-     )
+  constructor(public geolocation:Geolocation, public navCtrl: NavController, public authService: AuthService) { 
+        this.usuario = localStorage.getItem('usuarios');
+        console.log('Ingreso');
               }
-              ionViewDidLoad(){
-     
-              };
+ionViewDidLoad(){};
 
 ngAfterViewInit(){
   this.GeolocationNative();
