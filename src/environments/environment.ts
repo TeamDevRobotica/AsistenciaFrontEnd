@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  // apiURL:'http://localhost/nbmayorista/api',
-  apiURL:'http://www.nbmayorista.com/api',
+  apiURL:'http://localhost/nbmayorista/api',
+  // apiURL:'http://www.nbmayorista.com/api',
   
 };
 /*
