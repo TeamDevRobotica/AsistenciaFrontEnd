@@ -51,7 +51,7 @@ export class LoginPage implements OnInit {
     return this.loginForm.controls; 
   }
   OnSubmitLogin(){
-    console.log(this.f.usuario.value, this.f.clave.value);
+    // console.log(this.f.usuario.value, this.f.clave.value);
     this.http.get(this.apiURL + '/controlador.php?action=getLogin&usuario=' + this.f.usuario.value + '&pass=' + this.f.clave.value)
     .subscribe((res: any) => {
     
@@ -59,16 +59,17 @@ export class LoginPage implements OnInit {
         
           localStorage.setItem('usuarios', this.f.usuario.value);
           this.router.navigate(['/principal']);
+         // tslint:disable-next-line: whitespace
+         }else{
+          console.error('ERROR')
+          alert('Error');
          }
-
-      //     this.router.navigate(['home']);
-      // console.log("si bueno mi picho");
-      // this.authService.authenticationState.next(true)
-
-      // this.loadingService.dismiss()
-    }, err => {
-      console.error('ERROR', err);
-      // this.presentAlert("Error de conexion en el servidor");
+         error=>{
+         console.error('ERROR')
+         alert('Error');
+        // tslint:disable-next-line: semicolon
+        }       
+              // this.presentAlert("Error de conexion en el servidor");
       // this.dismissLoading()
     });
   //   return this.authService

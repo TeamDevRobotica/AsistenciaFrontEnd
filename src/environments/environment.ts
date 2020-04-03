@@ -4,7 +4,9 @@
 
 export const environment = {
   production: false,
-  apiURL:'http://localhost/nbmayorista/api',
+  // apiURL:'http://localhost/nbmayorista/api',
+  apiURL:'http://www.nbmayorista.com/api',
+  
 };
 /*
  * For easier debugging in development mode, you can import the following file

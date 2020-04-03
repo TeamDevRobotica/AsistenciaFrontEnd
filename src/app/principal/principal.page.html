@@ -10,21 +10,29 @@
    </ion-col>
   <!-- Armo grilla para alinear campos -->
     <ion-grid color= "light">
-    <ion-row>
-    <ion-col>Fecha:
-    </ion-col>
-    </ion-row>
-    <ion-row>
-    <ion-col>  
-    <ion-input type= "date" style="background-color:white; color: black;" Readonly="True"></ion-input>
-    </ion-col>
-  </ion-row>
+      <ion-row>
+        <ion-col style="font-size: 18px;">
+          <strong>FECHA</strong> 
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+         
+          <ion-item style="border-radius: 5px;">
+            <ion-datetime Attribute="disable" value="{{ fecha }}" [dayShortNames]="customDayShortNames" display-Format="DDD MM YYYY" readonly></ion-datetime>
+          </ion-item>  
+        </ion-col>
+      </ion-row>
   <ion-row>
-    <ion-col>Hora</ion-col>
+    <ion-col style="font-size: 18px;">
+      <strong>HORA</strong>
+    </ion-col>
   </ion-row>
   <ion-row>
     <ion-col>
-      <ion-input type = "text" style="background-color:white; color: black;" Readonly="True">00:00</ion-input>
+      <ion-item style="border-radius: 5px;">
+        <ion-datetime Attribute="disable" value="{{ fecha }}" display-Format="HH:mm:ss" readonly></ion-datetime>
+      </ion-item>  
     </ion-col>
     <!-- <ion-item>
       <ion-label color="primary">Time:</ion-label>

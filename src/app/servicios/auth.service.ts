@@ -36,7 +36,9 @@ import { UserInterface } from '../models/user-interface';
 })
 export class AuthService {
   // url='http://192.168.21.154:50000/usuarios';
-  url= 'http://www.nbmayorista.com/api';
+  // url= 'http://www.nbmayorista.com/api';
+  url= 'http://localhost/nbmayorista/api';
+
   
   constructor(public http: HttpClient) { 
     //  console.log('Hola Mundo');

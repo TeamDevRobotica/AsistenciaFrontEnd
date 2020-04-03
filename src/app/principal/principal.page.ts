@@ -10,20 +10,20 @@ import { NavController } from '@ionic/angular';
   selector: 'app-principal',
   templateUrl: './principal.page.html',
   styleUrls: ['./principal.page.scss'],
+  
 })
 export class PrincipalPage implements OnInit {
   usuarios:any[];
   nombre: string;
   usuario: string;
-
-
-  
-
+  fecha: Date = new Date();
+  customDayShortNames = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
   constructor(public geolocation:Geolocation, public navCtrl: NavController, public authService: AuthService) { 
         this.usuario = localStorage.getItem('usuarios');
         console.log('Ingreso');
               }
-ionViewDidLoad(){};
+ionViewDidLoad(){
+};
 
 ngAfterViewInit(){
   this.GeolocationNative();
@@ -35,6 +35,9 @@ ngAfterViewInit(){
   }
 
   ngOnInit() {
+    
+      
+   
   }
   
 
