@@ -1,56 +1,50 @@
-<ion-header style="text-align:center" color= "light">
-  <ion-toolbar color= "medium">
-    <ion-title>RENZO FEDELI</ion-title>
+<ion-header style="text-align:left" >
+  <ion-toolbar color= "warning">
+    <ion-title>
+      <strong> {{ usuario.nombre }} - SALIDA</strong>
+    </ion-title>
   </ion-toolbar>
-  </ion-header>
+</ion-header>
+
 <ion-content color= "primary"  mode="ios"  mode="md">
   <ion-row class="ion-justify-content-center">
-  <ion-card-content>
-    <ion-col size-md="6" size-lg="5" size-xs="12" color= "light">
-   </ion-col>
-  <!-- Armo grilla para alinear campos -->
-    <ion-grid color= "light">
-    <ion-row>
-    <ion-col>Fecha:
-    </ion-col>
-    </ion-row>
-    <ion-row>
-    <ion-col>  
-    <ion-input type= "date" style="background-color:floralwhite" Readonly="True" ></ion-input>
-    </ion-col>
+      <ion-card-content>
+      <!-- Armo grilla para alinear campos -->
+        <ion-grid color= "light">
+          <ion-row>
+            <ion-col style="font-size: 18px;">
+              <strong>FECHA</strong> 
+              <ion-item style="border-radius: 5px;">
+                <ion-datetime Attribute="disable" value="{{ fecha }}" [monthShortNames]="monthShortNames" display-Format="DD MMM YYYY" readonly></ion-datetime>
+              </ion-item>  
+            </ion-col>
+          </ion-row>
+        <ion-row>
+          <ion-col style="font-size: 18px;">
+            <strong>HORA</strong> 
+            <ion-item style="border-radius: 5px;">
+              <ion-datetime Attribute="disable" value="{{ fecha }}" display-Format="HH:mm:ss" readonly></ion-datetime>
+            </ion-item> 
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>Lugar</ion-col>
+          <ion-col>EFA1</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>Tareas realizadas*</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-item style="margin-bottom: 1rem">
+            <ion-input style=background-color:floralwhite type='text' maxlength="150" ></ion-input>
+          </ion-item>
+        </ion-row>
+      </ion-grid>
+      <ion-row class="ion-justify-content-center">
+        <ion-col class="ion-align-self-center">
+          <ion-button float-right color="success" href="/salida" mode="ios"  mode="md" type= "submit">MARCAR SALIDA</ion-button>    
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
   </ion-row>
-  <ion-row>
-    <ion-col>Hora</ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col>
-      <ion-input type = "text" style="background-color:floralwhite" Readonly="True">00:00</ion-input>
-    </ion-col>
-  </ion-row>
-    <ion-row>
-    <ion-col>Lugar</ion-col>
-    <ion-col>EFA1</ion-col>
-    </ion-row>
-    <!-- <ion-row>
-       <ion-col >
-        <ion-icon name="pin"></ion-icon>
-        <ion-label >Coordenadas</ion-label>
-      </ion-col>
-    </ion-row> -->
-    <ion-row>
-    <ion-col>Tareas realizadas*</ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-item style="margin-bottom: 1rem">
-        <ion-input style=background-color:floralwhite type='text' maxlength="150" ></ion-input>
-      </ion-item>
-  </ion-row>
-  </ion-grid>
-  <ion-row class="ion-justify-content-center">
-    <ion-col class="ion-align-self-center">
-    <ion-button float-right color="danger" href="salida" mode="ios"  mode="md" type= "submit">Marcar Salida</ion-button>
-    </ion-col>
-  </ion-row>
-</ion-card-content>
-</ion-row>
 </ion-content>
