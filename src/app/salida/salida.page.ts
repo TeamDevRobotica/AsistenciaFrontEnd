@@ -18,4 +18,9 @@ export class SalidaPage implements OnInit {
   ionViewWillEnter(){
     this.fecha = new Date();
   };
+  logout() {
+    localStorage.clear();
+    this.router.navigate(['/login']);
+    
+  }
 }

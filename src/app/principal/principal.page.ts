@@ -5,6 +5,7 @@ import { AuthService } from '../servicios/auth.service';
 
 import { NavController } from '@ionic/angular';
 import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -20,8 +21,8 @@ export class PrincipalPage implements OnInit {
   // tslint:disable-next-line: variable-name
   
   fecha: Date;
-  customDayShortNames = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
-  constructor(public geolocation:Geolocation, public navCtrl: NavController, public authService: AuthService) { 
+  monthShortNames = ['Ene', 'feb', 'mar', 'Abr', 'May' , 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic' ];
+  constructor(public router: Router,public geolocation:Geolocation, public navCtrl: NavController, public authService: AuthService) { 
     this.usuario = JSON.parse(localStorage.getItem('usuarios'));
     console.log(this.usuario.nombre);
               }
@@ -44,6 +45,10 @@ ionViewWillEnter(){
   ngOnInit() {
     this.fecha = new Date();
   }
-  
+  logout() {
+    localStorage.clear();
+    this.router.navigate(['/login']);
+    
+  }
 
 }

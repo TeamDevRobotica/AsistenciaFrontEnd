@@ -1,50 +1,74 @@
-<ion-header style="text-align:left" >
-  <ion-toolbar color= "warning">
-    <ion-title>
-      <strong> {{ usuario.nombre }} - SALIDA</strong>
-    </ion-title>
+<ion-header >
+  <ion-toolbar color="primary">
+      
+        <ion-item color="primary">
+          <ion-avatar slot="start">
+            <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+          </ion-avatar>
+          <ion-label><strong>{{ usuario.nombre }} - SALIDA</strong></ion-label>
+          <ion-button (click)="logout()" class="ion-float-right">
+            <ion-icon slot="end" name="exit-outline"></ion-icon>
+          </ion-button>
+        </ion-item>
+     
   </ion-toolbar>
 </ion-header>
-
-<ion-content color= "primary"  mode="ios"  mode="md">
-  <ion-row class="ion-justify-content-center">
-      <ion-card-content>
+<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+<ion-content   mode="ios"  mode="md">
+  <ion-card>
+    <ion-card-content>
+      <ion-row class="ion-justify-content-center">
       <!-- Armo grilla para alinear campos -->
         <ion-grid color= "light">
           <ion-row>
             <ion-col style="font-size: 18px;">
-              <strong>FECHA</strong> 
               <ion-item style="border-radius: 5px;">
+                <ion-icon style="color: gray;" name="calendar-outline"></ion-icon>
+                <ion-label style="color: gray;"><strong>FECHA</strong></ion-label>
                 <ion-datetime Attribute="disable" value="{{ fecha }}" [monthShortNames]="monthShortNames" display-Format="DD MMM YYYY" readonly></ion-datetime>
               </ion-item>  
             </ion-col>
           </ion-row>
         <ion-row>
           <ion-col style="font-size: 18px;">
-            <strong>HORA</strong> 
             <ion-item style="border-radius: 5px;">
-              <ion-datetime Attribute="disable" value="{{ fecha }}" display-Format="HH:mm:ss" readonly></ion-datetime>
+              <ion-icon style="color: gray;" name="time-outline"></ion-icon>
+              <ion-label style="color: gray;"><strong>HORA</strong> </ion-label>
+              <ion-datetime Attribute="disable" value="{{ fecha }}" display-Format="HH:mm" readonly></ion-datetime>
             </ion-item> 
           </ion-col>
         </ion-row>
-        <ion-row>
-          <ion-col>Lugar</ion-col>
-          <ion-col>EFA1</ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col>Tareas realizadas*</ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-item style="margin-bottom: 1rem">
-            <ion-input style=background-color:floralwhite type='text' maxlength="150" ></ion-input>
+      
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-icon style="color: gray;" name="navigate-outline"></ion-icon>
+            <ion-label style="color: gray;"><strong>LUGAR</strong></ion-label>
+            <ion-select placeholder="Ubicación">
+              <ion-select-option value="f">CEP 4</ion-select-option>
+              <ion-select-option value="m">EFA 32</ion-select-option>
+            </ion-select>
           </ion-item>
+        </ion-col>
+      </ion-row>
+        <!-- <ion-row>
+          <ion-col>Tareas realizadas*</ion-col>
+        </ion-row> -->
+        <ion-row>
+          <ion-col>
+            <ion-item class="" style="margin-bottom: 1rem;  border: solid gray 1px; border-radius: 4px; ">
+              <ion-textarea  placeholder="Resumen de la Actividad Realizada" style="color: gray;" type='text' maxlength="250" ></ion-textarea>
+            </ion-item>
+          </ion-col>
         </ion-row>
       </ion-grid>
+    </ion-row>
       <ion-row class="ion-justify-content-center">
         <ion-col class="ion-align-self-center">
           <ion-button float-right color="success" href="/salida" mode="ios"  mode="md" type= "submit">MARCAR SALIDA</ion-button>    
         </ion-col>
       </ion-row>
+    
     </ion-card-content>
-  </ion-row>
+  </ion-card>
 </ion-content>
