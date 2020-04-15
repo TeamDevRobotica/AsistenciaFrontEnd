@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  // apiURL:'http://localhost/nbmayorista/api',
+  
   apiURL: 'appambient.escueladerobotica.misiones.gob.ar/api',
   
   
