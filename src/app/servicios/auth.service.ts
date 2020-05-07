@@ -36,7 +36,7 @@ import { UserInterface } from '../models/user-interface';
 })
 export class AuthService {
   // url='http://192.168.21.154:50000/usuarios';
-  url: 'appambient.escueladerobotica.misiones.gob.ar/api';
+  url: 'http://localhost:50000/api/';
 
   
   constructor(public http: HttpClient) { 
@@ -49,13 +49,13 @@ export class AuthService {
   //   return this.http.get(this.url);
   //   console.log()
   // }
-  obtenerDatos(): Observable<any[]> {
-    return this.http.get<any[]>(this.url);
-    console.log(this.url);
-  }
+   obtenerDatos(): Observable<any[]> {
+     return this.http.get<any[]>(this.url);
+     console.log(this.url);
+   }
 
   login(usuario: string, clave: string): Observable<any> {
-    const url = 'appambient.escueladerobotica.misiones.gob.ar/api';
+    const url = 'http://localhost:50000/api/';
     return this.http
       .post <UserInterface> (
         url,

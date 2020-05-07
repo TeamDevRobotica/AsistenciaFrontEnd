@@ -11,7 +11,7 @@ export class SalidaPage implements OnInit {
   usuario: any;
   monthShortNames = ['Ene', 'feb', 'mar', 'Abr', 'May' , 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic' ];
   constructor(public router: Router) { 
-    this.usuario = JSON.parse(localStorage.getItem('usuarios'));
+    // this.usuario = JSON.parse(localStorage.getItem('usuarios'));
   }
 
   ngOnInit() {

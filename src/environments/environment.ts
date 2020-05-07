@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   
-  apiURL: 'appambient.escueladerobotica.misiones.gob.ar/api',
+  apiURL: 'http://localhost:50000/api/',
   
   
 };

@@ -7,7 +7,7 @@
         
         </ion-col>
     </ion-card-content>
-    <form (submit)="OnSubmitLogin()" [formGroup]="loginForm">
+    <form [formGroup]="loginForm">
       <ion-card-content>
         <ion-item>
           <ion-label position="floating">Usuario</ion-label>
@@ -16,8 +16,9 @@
           <ion-input type="password" formControlName="clave"></ion-input>
         </ion-item>
           <br>
-        <ion-button type="submit"  expand="block">Ingresar</ion-button>
+        
       </ion-card-content>
     </form>
+    <ion-button type="submit"  expand="block" href="/principal">Ingresar</ion-button>
   </ion-card>
 </ion-content>

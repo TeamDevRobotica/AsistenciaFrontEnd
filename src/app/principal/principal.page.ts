@@ -23,8 +23,8 @@ export class PrincipalPage implements OnInit {
   fecha: Date;
   monthShortNames = ['Ene', 'feb', 'mar', 'Abr', 'May' , 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic' ];
   constructor(public router: Router,public geolocation:Geolocation, public navCtrl: NavController, public authService: AuthService) { 
-    this.usuario = JSON.parse(localStorage.getItem('usuarios'));
-    console.log(this.usuario.nombre);
+    // this.usuario = JSON.parse(localStorage.getItem('usuarios'));
+    // console.log(this.usuario.nombre);
               }
 ionViewDidLoad(){}
 
